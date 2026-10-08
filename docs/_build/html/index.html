@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>fasta-tool &#8212; документация fasta-tool 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=e35015f7"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="fasta-tool">
+<h1>fasta-tool<a class="headerlink" href="#fasta-tool" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="module-fasta_tool.seq">
+<span id="seq"></span><h2>Модуль Seq<a class="headerlink" href="#module-fasta_tool.seq" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Модуль с классом <a class="reference internal" href="#fasta_tool.seq.Seq" title="fasta_tool.seq.Seq"><code class="xref py py-class docutils literal notranslate"><span class="pre">Seq</span></code></a> - одна биологическая последовательность.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">fasta_tool.seq.</span></span><span class="sig-name descname"><span class="pre">Seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fasta_tool.seq.Seq" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Последовательность (нуклеотидная или белковая) с заголовком.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> – строка последовательности, например <code class="docutils literal notranslate"><span class="pre">&quot;ATGC&quot;</span></code></p></li>
+<li><p><strong>header</strong> – заголовок fasta-записи (текст после <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Исключение<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – если последовательность пустая</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#fasta_tool.seq.Seq.__init__" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#fasta_tool.seq.Seq.__len__" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Длина последовательности: работает как <code class="docutils literal notranslate"><span class="pre">len(seq)</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#fasta_tool.seq.Seq.__repr__" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Техническое представление для отладки.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#fasta_tool.seq.Seq.__str__" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Красивое строковое представление: работает как <code class="docutils literal notranslate"><span class="pre">print(seq)</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.alphabet">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">alphabet</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#fasta_tool.seq.Seq.alphabet" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Алфавит последовательности.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&quot;nucleotide&quot;</span></code>, если все символы из <code class="docutils literal notranslate"><span class="pre">ACGTUN</span></code>,
+иначе <code class="docutils literal notranslate"><span class="pre">&quot;protein&quot;</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.header">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">header</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#fasta_tool.seq.Seq.header" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Заголовок fasta-записи без символа <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> (только чтение).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fasta_tool.seq.Seq.sequence">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">sequence</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#fasta_tool.seq.Seq.sequence" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Сама последовательность (только чтение).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fasta_tool.reader">
+<span id="fastareader"></span><h2>Модуль FastaReader<a class="headerlink" href="#module-fasta_tool.reader" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Модуль с классом <a class="reference internal" href="#fasta_tool.reader.FastaReader" title="fasta_tool.reader.FastaReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">FastaReader</span></code></a> - чтение fasta-файлов.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fasta_tool.reader.FastaReader">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">fasta_tool.reader.</span></span><span class="sig-name descname"><span class="pre">FastaReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fasta_tool.reader.FastaReader" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Читает fasta-файл по записям, не загружая его целиком в память.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – путь к fasta-файлу</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.reader.FastaReader.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#fasta_tool.reader.FastaReader.__init__" title="Ссылка на это определение">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.reader.FastaReader.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#fasta_tool.reader.FastaReader.is_valid" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Проверяет, что файл соответствует формату fasta.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code>, если весь файл прочитан без ошибок формата</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fasta_tool.reader.FastaReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fasta_tool.seq.Seq" title="fasta_tool.seq.Seq"><span class="pre">Seq</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#fasta_tool.reader.FastaReader.read" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Генератор: по одной записи отдаёт объекты <code class="xref py py-class docutils literal notranslate"><span class="pre">Seq</span></code>.
+Файл читается построчно, в памяти хранится только текущая запись.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Исключение<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – если файл не соответствует формату fasta</p></li>
+<li><p><strong>FileNotFoundError</strong> – если файла нет</p></li>
+</ul>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>итератор объектов Seq</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">fasta-tool</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, anastasias.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

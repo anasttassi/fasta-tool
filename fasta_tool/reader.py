@@ -4,6 +4,7 @@ from typing import Iterator
 from .seq import Seq
 class FastaReader:
     """Читает fasta-файл по записям, не загружая его целиком в память.
+    
     :param path: путь к fasta-файлу
     """
     _VALID_LINE = re.compile(r"[A-Za-z*\-]+")
@@ -12,6 +13,7 @@ class FastaReader:
 
     def is_valid(self) -> bool:
         """Проверяет, что файл соответствует формату fasta.
+
         :return: ``True``, если весь файл прочитан без ошибок формата
         """
         try:
@@ -24,6 +26,7 @@ class FastaReader:
     def read(self) -> Iterator[Seq]:
         """Генератор: по одной записи отдаёт объекты :class:`Seq`.
         Файл читается построчно, в памяти хранится только текущая запись.
+
         :raises ValueError: если файл не соответствует формату fasta
         :raises FileNotFoundError: если файла нет
         :return: итератор объектов Seq
